@@ -2,8 +2,9 @@
 
 namespace Luova\Nagad;
 
-use Illuminate\Support\Facades\Event;
+
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\AliasLoader;
 
 class NagadServiceProvider extends ServiceProvider
 {
@@ -12,6 +13,8 @@ class NagadServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config/nagad.php' => config_path('nagad.php')
         ], 'nagad');
+
+        AliasLoader::getInstance()->alias('LNagad', 'Luova\Nagad\Traits\LNagad');
     }
 
     public function register()
