@@ -6,7 +6,7 @@ Laravel Nagad payment `BD`
 # Installation
 
 ```bash
-composer require code4mk/lara-nagad
+composer require luova/nagad
 ```
 
 # Setup
@@ -117,10 +117,7 @@ Route::get('get-support-id',function(){
 })
 ```
 
-# Demo
-
-* [Lara Nagad Demo](https://github.com/code4mk/lara-nagad-demo)
 
 # Any query
 
-* hiremostafa@gmail.com
+* hm91hassan@gmail.com
