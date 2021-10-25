@@ -71,9 +71,9 @@ NAGAD_PRIVATE_KEY=""
 
 ```php
 <?php
-use NagadPayment;
+use LNagad;
 
-$redirectUrl = NagadPayment::tnxID($id)
+$redirectUrl = LNagad::tnxID($id)
              ->amount($amount)
              ->getRedirectUrl();
 return $redirectUrl;
