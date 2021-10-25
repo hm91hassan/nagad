@@ -1,0 +1,19 @@
+{
+  "name": "luova/nagad",
+  "description": "This will nagad payment getway pagckage for laravel",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohammad Hasan",
+      "email": "hm91hassan@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Luova\\Nagad\\": "src/"
+    }
+  }
+}
