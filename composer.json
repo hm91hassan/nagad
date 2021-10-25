@@ -1,7 +1,16 @@
 {
   "name": "luova/nagad",
-  "description": "This will nagad payment getway pagckage for laravel",
-  "type": "library",
+  "description": "Laravel nagad payment package",
+  "keywords": [
+    "nagad",
+    "laravel-nagad",
+    "hm91hassan"
+  ],
+  "homepage": "https://github.com/hm91hassan/nagad",
+  "support": {
+    "issues": "https://github.com/hm91hassan/nagad/issues",
+    "source": "https://github.com/hm91hassan/nagad"
+  },
   "license": "MIT",
   "authors": [
     {
@@ -14,6 +23,13 @@
   "autoload": {
     "psr-4": {
       "Luova\\Nagad\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Luova\\Nagad\\NagadServiceProvider"
+      ]
     }
   }
 }

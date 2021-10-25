@@ -39,8 +39,8 @@ return [
 
 
     'apiCredentials' => [
-        'merchant_id' => env("NAGAD_MERCHENT_ID", '683002007104225'), // Your merchant ID
-        'wallet' => env("NAGAD_WALLET", '01711428036'), // Your merchant Wallet number
+        'merchant_id' => env("NAGAD_MERCHENT_ID", ''), // Your merchant ID
+        'wallet' => env("NAGAD_WALLET", ''), // Your merchant Wallet number
     ],
     'apiUrl' => [
         'initialize' => "/check-out/initialize/",
@@ -56,12 +56,13 @@ return [
 # env setup
 
 ```bash
-NAGAD_MERCHANT_ID=683002007104225
-NAGAD_MERCHANT_NUMBER=01711428036
-NAGAD_CALLBACK_URL=http://127.0.0.1:8000/nagad/callback
-NAGAD_MODE=sandbox // sandbox or live
-NAGAD_PUBLIC_KEY="" //sandbox <optional>
-NAGAD_PRIVATE_KEY=""  // sandbox <optional>
+NAGAD_MERCHENT_ID=""
+NAGAD_WALLET=""
+NAGAD_API_SENDBOX=""
+NAGAD_API_LIVE=""
+NAGAD_PUBLIC_KEY=""
+NAGAD_PRIVATE_KEY="" 
+
 ```
 
 # Usage
