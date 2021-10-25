@@ -73,29 +73,39 @@ NAGAD_PRIVATE_KEY=""
 <?php
 use LNagad;
 
-$redirectUrl = LNagad::tnxID($id)
-             ->amount($amount)
-             ->getRedirectUrl();
-return $redirectUrl;
+class CartController extends Controller
+{
+    use LNagad;
+    public function order()
+    {
+        // Call to payment Nagad
+        $this->nagadInitialize([
+                'amount' => '10', // cart ammount
+                'transaction_id' => '3354asdf' // unique order transaction id or your order id
+            ]);
+    }
+
+
+
 ```
 
 ## verify payment // callback
 
 ```php
 <?php
-use NagadPayment;
+use LNagad;
 
-$verify = (object) NagadPayment::verify();
-if($verify->status === 'Success'){
-    $order = json_decode($verify->additionalMerchantInfo);
-    $order_id = $order->tnx_id;
-    // your functional task with order_id
-}
-if ($verify->status === 'Aborted') {
-    dd($verify);
-    // redirect or other what you want
-}
-dd($verify);
+class CartController extends Controller
+{
+    use LNagad;
+
+     public function callback(Request $request)
+    {
+        $payment_ref_id = $request->payment_ref_id;
+        $verify = $this->NagadPyamentVerify($payment_ref_id);
+        // dd($verify); // For check verification response
+        // After Your code
+    }
 
 ```
 
@@ -116,20 +126,6 @@ dd($verify);
 
 `Sandbox works fine but when you deploy your project on server you can't get any response and don't work payment system`
 
-## How to enable nagad gateway on server 
-
-* Contact with nagad, provide your ip and support ID  which you will get from temporary route `get-support-id` . Nagad will be white-listed your ip and approve your merchant. Now your nagad gateway work properly on server.
-
-~ temporary route (copy and paste)
-
-```php
-Route::get('get-support-id',function(){
-    $sid = NagadPayment::tnxID(1)
-                 ->amount(100)
-                 ->getSupportID();
-    return $sid;
-})
-```
 
 
 # Any query
