@@ -96,7 +96,11 @@ trait LNagad
                 } else {
                     echo json_encode($PlainResponse);
                 }
+            } else {
+                echo json_encode($Result_Data);
             }
+        } else {
+            echo json_encode($Result_Data);
         }
     }
 
