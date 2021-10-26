@@ -1,7 +1,19 @@
-<p align="center" ><img src="https://raw.githubusercontent.com/hm91hassan/nagad/master/nagad%20payment.png"></p>
+<p align="center" ><img src="https://raw.githubusercontent.com/hm91hassan/nagad/master/nagad-payment.png"></p>
 
 # laravel nagad `Bangladesh Nagad`
 Laravel Nagad payment `BD`
+
+[![Latest Stable Version](https://poser.pugx.org/luova/nagad/v/stable)](https://packagist.org/packages/luova/nagad)
+[![Total Downloads](https://poser.pugx.org/luova/nagad/downloads)](https://packagist.org/packages/luova/nagad)
+[![Latest Unstable Version](https://poser.pugx.org/luova/nagad/v/unstable)](https://packagist.org/packages/luova/nagad)
+[![License](https://poser.pugx.org/luova/nagad/license)](https://packagist.org/packages/luova/nagad)
+[![Monthly Downloads](https://poser.pugx.org/luova/nagad/d/monthly)](https://packagist.org/packages/luova/nagad)
+[![Daily Downloads](https://poser.pugx.org/luova/nagad/d/daily)](https://packagist.org/packages/luova/nagad)
+[![composer.lock](https://poser.pugx.org/luova/nagad/composerlock)](https://packagist.org/packages/luova/nagad)
+
+[Nagad](https://nagad.com.bd) is one of the Financial Services in Bangladesh. This package is built for Nagad Payment Gateway for Laravel 6.x, 7.x and 8.x+ 
+
+
 
 # Installation
 
